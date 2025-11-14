@@ -8,6 +8,8 @@ jobs:
    steps:
     - name: Clone the repo on ubuntu server
       uses: actions/checkout@v4
+    - name: Test Docker
+      run: docker --version
     - name: Install Java and maven on ubuntu server
       uses: actions/setup-java@v4
       with:
