@@ -8,8 +8,6 @@ jobs:
    steps:
     - name: Clone the repo on ubuntu server
       uses: actions/checkout@v4
-    - name: Test Docker
-      run: docker --version
     - name: Install Java and maven on ubuntu server
       uses: actions/setup-java@v4
       with:
@@ -19,7 +17,7 @@ jobs:
     - name: Build the code 
       run: mvn package
     - name: Connect to Lab machine and trigger a Jenkins job 
-      uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
+      uses: appleboy/ssh-action@v0.1.10
       with:
         host: '65.2.33.5'
         user: 'labuser'
