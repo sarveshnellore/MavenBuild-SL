@@ -17,7 +17,7 @@ jobs:
     - name: Build the code 
       run: mvn package
     - name: Connect to Lab machine and trigger a Jenkins job 
-      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.0
       with:
         host: '65.2.33.5'
         user: 'labuser'
